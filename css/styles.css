@@ -1,12 +1,52 @@
 /*
   DIAGNOSTIC STYLING
 */
-body {
-  background: gray;
+
+#stage {
+  /* Fixed Sizes */
+  height: 300px;
+  width: 900px;
+  
+  position: relative;
+  overflow: hidden; 
 }
 
-* {
-  outline: 1px dotted black;
+/* First */
+
+h1 {
+ position: absolute;
+  
+  left: -200px;
+  top: 0; 
+  
+  transition: left 1s; 
+}
+
+.Layer_8,
+.Layer_7 {
+  position: absolute;
+  height: 50px;
+  width: 50px; 
+  
+  right: 100px;
+  top: 45px; 
+  
+ animation: slideOutLeft 10s infinite linear;
+}
+
+/* Last */
+#stage:hover h1{
+  left: 0; 
+}
+
+@keyframes slideOutLeft {
+  0% {
+    right: -100px;
+  }
+
+  100% {
+    right: 1100px; 
+  }
 }
 
 /* Your Awesome Scripts */
